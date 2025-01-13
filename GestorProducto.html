@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Productos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f9;
+        }
+
+        .container {
+            max-width: 500px;
+            width: 100%;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 16px;
+            text-align: left;
+        }
+
+        form input {
+            width: calc(100% - 20px);
+            /* Esto resta un espacio de 20px para el padding */
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 10px 0;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .product-list {
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .product-item {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            border: none;
+            padding: 10px;
+            margin: 10px 0;
+            background-color: #fff;
+        }
+
+        .product-item p {
+            margin: 0;
+        }
+
+        .product-item button {
+            margin-left: 10px;
+        }
+
+        .product-container {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            border: none;
+            padding: 20px;
+            background-color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Gestión de Productos</h1>
+        <form id="productForm">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" required>
+
+            <label for="precio">Precio:</label>
+            <input type="number" id="precio" required>
+
+            <label for="categoria">Categoría:</label>
+            <input type="text" id="categoria" required>
+
+            <button type="submit">Agregar Producto</button>
+        </form>
+
+        <button id="listProducts">Listar Productos</button>
+
+        <div class="product-list" id="productList"></div>
+    </div>
+
+    <script src="GestorProducto.js"></script>
+</body>
+
+</html>
